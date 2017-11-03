@@ -17,6 +17,7 @@ public class Glowna extends Glowna2 {
         System.out.println(gl.getName());
         System.out.println();
 //        fffffffffff
+//        aaaaaaaaaaa
 
         Lambda3Interfejs addInt = ((a, b) -> a + b);
 //        Lambda3Interfejs substract = ((a, b) -> a - b);
