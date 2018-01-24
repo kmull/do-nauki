@@ -1,24 +1,33 @@
 package pl.kata.HighAndLow;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 
 public class Kata {
 
     public static String HighAndLow(String numbers) {
         // Code here or
 
-        int min = Arrays.stream(numbers.split(" "))
+//        int min = Arrays.stream(numbers.split(" "))
+//                .mapToInt(i -> Integer.parseInt(i))
+//                .min()
+//                .getAsInt();
+//
+//        int max = Arrays.stream(numbers.split(" "))
+//                .mapToInt(i -> Integer.parseInt(i))
+//                .max()
+//                .getAsInt();
+//
+//        return max + " " + min;
+
+        IntSummaryStatistics summary = Arrays.stream(numbers.split(" "))
                 .mapToInt(i -> Integer.parseInt(i))
-                .min()
-                .getAsInt();
+                .summaryStatistics();
 
-        int max = Arrays.stream(numbers.split(" "))
-                .mapToInt(i -> Integer.parseInt(i))
-                .max()
-                .getAsInt();
-
-        return max + " " + min;
-
+//        return summary.getMax() + " " + summary.getMin();
+        String some = "krzys";
+        double ff =  3.3;
+        return String.format("%d %d %s, %.2f" , summary.getMax(), summary.getMin(), some, ff);
     }
 
 
